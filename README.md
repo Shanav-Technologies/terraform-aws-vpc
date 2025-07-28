@@ -17,7 +17,7 @@ This Terraform module creates structured vpc for AWS resources with specific att
 
 ```hcl
 module "vpc" {
-  source                              = "git::https://github.com/shanav-tech/terraform-aws-vpc.git?ref=v1.0.0"
+  source                              = "git::https://github.com/Shanav-Technologies/terraform-aws-vpc.git?ref=v1.0.0"
   name                                = "app"
   environment                         = "test"
   cidr_block                          = "10.0.0.0/16"
@@ -32,14 +32,14 @@ Please ensure you specify the correct 'source' path for the module.
 
 
 # Examples
-For detailed examples on how to use this module, please refer to the [Example](https://github.com/shanav-tech/terraform-aws-vpc/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [Example](https://github.com/Shanav-Technologies/terraform-aws-vpc/tree/master/_example) directory within this repository.
 
 ## Authors
 Your Name
 Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/shanav-tech/terraform-aws-vpc/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Shanav-Technologies/terraform-aws-vpc/blob/master/LICENSE) file for details.
 
 
 sed
@@ -50,8 +50,8 @@ Check that executables have shebangs.................(no files to check)Skipp
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.50.0 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.5.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.1.0 |
 
 ## Providers
 
@@ -63,39 +63,39 @@ Check that executables have shebangs.................(no files to check)Skipp
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/shanav-tech/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/Shanav-Technologies/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_cloudwatch_log_group.flow_log](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
-| [aws_default_network_acl.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_network_acl) | resource |
-| [aws_default_route_table.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_route_table) | resource |
-| [aws_default_security_group.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_security_group) | resource |
-| [aws_egress_only_internet_gateway.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/egress_only_internet_gateway) | resource |
-| [aws_flow_log.vpc_flow_log](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log) | resource |
-| [aws_iam_policy.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
-| [aws_iam_role.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy_attachment.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_internet_gateway.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
-| [aws_kms_alias.kms-alias](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
-| [aws_kms_key.kms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
-| [aws_kms_key_policy.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key_policy) | resource |
-| [aws_s3_bucket.mybucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
-| [aws_s3_bucket_acl.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl) | resource |
-| [aws_s3_bucket_ownership_controls.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls) | resource |
-| [aws_s3_bucket_policy.block-http](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) | resource |
-| [aws_s3_bucket_public_access_block.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
-| [aws_s3_bucket_server_side_encryption_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
-| [aws_vpc.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
-| [aws_vpc_dhcp_options.vpc_dhcp](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_dhcp_options) | resource |
-| [aws_vpc_dhcp_options_association.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_dhcp_options_association) | resource |
-| [aws_vpc_ipv4_cidr_block_association.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_ipv4_cidr_block_association) | resource |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
-| [aws_iam_policy_document.flow_log_cloudwatch_assume_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_iam_policy_document.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
+| [aws_cloudwatch_log_group.flow_log](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/cloudwatch_log_group) | resource |
+| [aws_default_network_acl.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/default_network_acl) | resource |
+| [aws_default_route_table.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/default_route_table) | resource |
+| [aws_default_security_group.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/default_security_group) | resource |
+| [aws_egress_only_internet_gateway.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/egress_only_internet_gateway) | resource |
+| [aws_flow_log.vpc_flow_log](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/flow_log) | resource |
+| [aws_iam_policy.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_policy) | resource |
+| [aws_iam_role.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_internet_gateway.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/internet_gateway) | resource |
+| [aws_kms_alias.kms-alias](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_alias) | resource |
+| [aws_kms_key.kms](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_key) | resource |
+| [aws_kms_key_policy.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_key_policy) | resource |
+| [aws_s3_bucket.mybucket](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket) | resource |
+| [aws_s3_bucket_acl.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_acl) | resource |
+| [aws_s3_bucket_ownership_controls.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_ownership_controls) | resource |
+| [aws_s3_bucket_policy.block-http](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_policy) | resource |
+| [aws_s3_bucket_public_access_block.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_public_access_block) | resource |
+| [aws_s3_bucket_server_side_encryption_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [aws_vpc.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/vpc) | resource |
+| [aws_vpc_dhcp_options.vpc_dhcp](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/vpc_dhcp_options) | resource |
+| [aws_vpc_dhcp_options_association.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/vpc_dhcp_options_association) | resource |
+| [aws_vpc_ipv4_cidr_block_association.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/vpc_ipv4_cidr_block_association) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/data-sources/caller_identity) | data source |
+| [aws_iam_policy_document.flow_log_cloudwatch_assume_role](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.vpc_flow_log_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/data-sources/iam_policy_document) | data source |
+| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/data-sources/region) | data source |
 
 ## Inputs
 
@@ -148,7 +148,7 @@ Check that executables have shebangs.................(no files to check)Skipp
 | <a name="input_ipv6_netmask_length"></a> [ipv6\_netmask\_length](#input\_ipv6\_netmask\_length) | The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a ipv6\_ipam\_pool\_id | `string` | `null` | no |
 | <a name="input_kms_key_deletion_window"></a> [kms\_key\_deletion\_window](#input\_kms\_key\_deletion\_window) | KMS Key deletion window in days. | `number` | `10` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'shanav-tech' | `string` | `"shanav-tech"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'Shanav-Technologies' | `string` | `"Shanav-Technologies"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `"dev"` | no |
 | <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `""` | no |
 | <a name="input_restrict_default_sg"></a> [restrict\_default\_sg](#input\_restrict\_default\_sg) | Flag to control the restrict default sg creation. | `bool` | `true` | no |

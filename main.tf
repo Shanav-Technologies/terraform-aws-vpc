@@ -1,8 +1,8 @@
-## Managed By : shanav-tech
+## Managed By : Shanav-Technologies
 ## Description : This Script is used to create Transfer Server, Transfer User And label .
-## Copyright @ shanav-tech. All Right Reserved.
+## Copyright @ Shanav-Technologies. All Right Reserved.
 module "labels" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-labels.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-labels.git?ref=v1.0.0"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
